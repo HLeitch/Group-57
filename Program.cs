@@ -10,6 +10,7 @@ namespace test
         public static int iterationValue = 0;
         public static float countriesAgreed = 0;
         public static float populationPercentage = 0;
+        public static int userRule;
     }
 
     public class Inputs
@@ -30,8 +31,18 @@ namespace test
             }
             Vars.iterationValue = 0;
 
+
             
-            foreach( Country c in listOfCountries)
+            Console.WriteLine("1 - qualified majority");
+            Console.WriteLine("2 - simple majority");
+            Console.WriteLine("Which majority do you want? (1 or 2): ");
+
+            Vars.userRule = Convert.ToInt32(Console.ReadLine());
+            
+
+
+
+            foreach ( Country c in listOfCountries)
             {
                 Vars.repeat = true;
                 while (Vars.repeat)
@@ -81,8 +92,15 @@ namespace test
             //turning countriesAgreed into a percentage
             Vars.countriesAgreed = (Vars.countriesAgreed / 27) * 100;
 
+            if (Vars.userRule == 1)
+            {
+                Output.QualifiedMajority();
+            }
+            else
+            {
+                Output.SimpleMajority();
+            }
 
-            Output.QualifiedMajority();
         }
     }
     
