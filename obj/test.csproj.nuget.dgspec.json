@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Harry\\source\\repos\\OO group assignment\\test.csproj": {}
+    "C:\\Users\\harri\\OneDrive\\Desktop\\OOP\\test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Harry\\source\\repos\\OO group assignment\\test.csproj": {
+    "C:\\Users\\harri\\OneDrive\\Desktop\\OOP\\test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Harry\\source\\repos\\OO group assignment\\test.csproj",
+        "projectUniqueName": "C:\\Users\\harri\\OneDrive\\Desktop\\OOP\\test.csproj",
         "projectName": "test",
-        "projectPath": "C:\\Users\\Harry\\source\\repos\\OO group assignment\\test.csproj",
-        "packagesPath": "C:\\Users\\Harry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Harry\\source\\repos\\OO group assignment\\obj\\",
+        "projectPath": "C:\\Users\\harri\\OneDrive\\Desktop\\OOP\\test.csproj",
+        "packagesPath": "C:\\Users\\harri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\harri\\OneDrive\\Desktop\\OOP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Harry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\harri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

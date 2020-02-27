@@ -10,6 +10,8 @@ namespace test
         public static int iterationValue = 0;
         public static float countriesAgreed = 0;
         public static float populationPercentage = 0;
+        public static float totalPopulation = 100;
+        public static float agreedPopulation = 0;
         public static int userRule;
     }
 
@@ -27,6 +29,7 @@ namespace test
             foreach (string c in countries)
             {
                 Country a = new Country(c, countryPopulations[Vars.iterationValue], false);
+                Vars.iterationValue++;
                 listOfCountries.Add(a);
             }
             Vars.iterationValue = 0;
@@ -47,6 +50,7 @@ namespace test
                 Vars.repeat = true;
                 while (Vars.repeat)
                 {
+                    
                     Console.WriteLine("\n{0}\nYes, No or Abstain: ", c.name);
                     //taking user input on whether the country is agreeing, disagreeing or abstaining
                     string userInput = Console.ReadLine();
@@ -55,7 +59,8 @@ namespace test
                     if (userInput == "yes")
                     {
                         //increasing the population count by the population increase
-                        Vars.populationPercentage += c.population;
+                        Vars.agreedPopulation += c.population;
+                        
                         //rounds the population to a 2d.p. percentage, rounds towards the nearest whole no.
                         Math.Round(Vars.populationPercentage, 2, MidpointRounding.AwayFromZero);
                         //if the population exceeds 100, population equals 100
@@ -90,7 +95,8 @@ namespace test
                 }
             }
             //turning countriesAgreed into a percentage
-            Vars.countriesAgreed = (Vars.countriesAgreed / 27) * 100;
+            Vars.countriesAgreed = (Vars.countriesAgreed / listOfCountries.Count) * 100;
+            Vars.populationPercentage = (Vars.agreedPopulation / Vars.totalPopulation) * 100;
 
             if (Vars.userRule == 1)
             {
